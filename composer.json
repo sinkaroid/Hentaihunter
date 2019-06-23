@@ -1,0 +1,11 @@
+{
+    "name": "bib/hentaihunter",
+    "description": "doujin stealer",
+    "authors": [
+        {
+            "name": "sinkaroid",
+            "email": "bibsindra@gmail.com"
+        }
+    ],
+    "require": {}
+}
