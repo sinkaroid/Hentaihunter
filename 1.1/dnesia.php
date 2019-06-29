@@ -2,17 +2,12 @@
 <link rel="shortcut icon" href="https://1.bp.blogspot.com/-q4WhoEwfRlI/XDCnuof_TsI/AAAAAAAAIsQ/HxA6hd2mIOgiO8KveXaxKwfaecawWpCgwCLcBGAs/s1600/kano.png" type="image/x-icon">
 <meta name='author' content='Stupidc0de Family'>
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
-<style>
-.subbtn {background:#b70505;color:white;border: 1px solid #000; padding:6px 6px 6px 6px;}
-=======
 
 <style>
 
 .subbtn {background:#b70505;color:white;border: 1px solid #000; padding:6px 6px 6px 6px;}
 
 
->>>>>>> 1.3
 .bordergaya{
 			background:black;
 			color:white;
@@ -42,11 +37,8 @@
 @-webkit-keyframes spin { 100% { -webkit-transform: rotate(-360deg); } }
 @keyframes spin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 1.3
 </style>
 
 <?php
@@ -62,10 +54,7 @@
 	}
 	}
 	
-<<<<<<< HEAD
-=======
 	
->>>>>>> 1.3
 ?>
   <br><center><font face="Ubuntu" size="5" color="white"><b>ImageStealer by Sc0<b/></font></center>
   <center><img class='image' src='https://3.bp.blogspot.com/-6XZOk6uPV4U/XEBO8xwFcwI/AAAAAAAABL4/BDAHAxIoOCAZCO0FmEnNtAyGXoTx9dz6wCLcBGAs/s1600/weeblogo.png'>
@@ -86,8 +75,4 @@
       <td colspan="2" align="center" valign="middle"><input class="subbtn" type="submit" name="submit" id="button" value="  >  " /></td>
     </tr>
   </table>
-<<<<<<< HEAD
 </form>
-=======
-</form>
->>>>>>> 1.3

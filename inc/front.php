@@ -1,6 +1,6 @@
 <title>HentaiHunteR</title>
 <link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="process/style.css">
+<link rel="stylesheet" type="text/css" href="inc/style.css">
 <!-- <script type="text/javascript" src="process/rain.js"></script> -->
 <bgcolor="black">
 <br>

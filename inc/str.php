@@ -1,76 +1,9 @@
-<title>HentaiHunteR</title>
-<link href="http://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" type="text/css">
-<style>
-#menu{
-	background:#000000;
-	margin:8px 2px 4px 2px;
-}
-#menu a{
-	padding:10px 12px;
-	margin:1;
-	background:#d20303;
-	text-decoration:none;
-	letter-spacing:1px;
-	-moz-border-radius: 10px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; border-radius: 5px;
-}
-#menu a:hover{
-	background:gray;
-	border-bottom:5px solid #red;
-	border-top:5px solid #red;
-}
-.memek {
-  margin: auto;
-  width: 70%;
-  border: 4px solid crimson;
-  padding: 3px;
-}
-.toto {
-   text-align: center;
- }
-.toto pre {
-  display: inline-block;
-  text-align: left;
- }
- </style>
-<bgcolor="black">
-<br>
-<center>
-<font face='Ubuntu' size='6' color='red'><b>HentaiHunter.</b></font></center>
-<div class="toto">
-<font face="courier" size="3" color="gold">
-<pre style="text-align: left;">
-             |       :     . |
-             | '  :      '   |
-             |  .  |   '  |  |
-   .--._ _...:.._ _.--. ,  ' |
-  (  ,  `        `  ,  )   . |
-   '-/              \-'  |   |
-     |  o   /\   o  |       :|
-     \     _\/_     / :  '   |
-     /'._   ^^   _.;___      |
-   /`    `""""""`      `\=   |
- /`                     /=  .|
-;             '--,-----'=    |
-|                 `\  |    . |
-\                   \___ :   |
-/'.                     `\=  |
-\_/`--......_            /=  |
-            |`-.        /= : |
-            | : `-.__ /` .   |
-            |jgs .   ` |    '|
-            |  .  : `   . |  |
-</pre></div>
-<center>
 <?php
-error_reporting(0);
-/** get server */
+require 'inc/inc.php';
+    print $ireng;
+//sysinfo
+$dir = mkdir("rootresult", 0777);
 $self=$_SERVER['PHP_SELF'];
-$srvr_sof=$_SERVER['SERVER_SOFTWARE'];
-$your_ip=$_SERVER['REMOTE_ADDR'];
-$srvr_ip=$_SERVER['SERVER_ADDR'];
-$admin=$_SERVER['SERVER_ADMIN'];
-$curl = (function_exists('curl_version')) ? "<font color=lime>ON</font>" : "<font color=red>OFF</font>";
-$curl = (function_exists('curl_version')) ? "<font color=lime>ON</font>" : "<font color=red>OFF</font>";
 $freespace = hdd(disk_free_space("/"));
 $total = hdd(disk_total_space("/"));
 $used = $total - $freespace;
@@ -84,61 +17,55 @@ function hdd($s) {
 	else
 	return $s .' B';
 }
-echo"
-<font face='consolas' size='2' color='gold'><center>
-[ SPACE: <font color=green>$total</font> ] - [ Free: <font color=lime>$freespace</font> ]</center></font>";
-echo"<center>";
-echo'
-<body bgcolor="black" > ';
+
+//h2r
+
+if(isset($_GET['h2'])){
+    print $hentai2read;
+}
+    
+if(isset($_GET['h2r'])){
+    echo '[ <font color=gray>',$link,'</font> ] -> as victim',$pencetan; 
+    
+    for($i=1;$i<=$am0;$i++){
+    $i = sprintf('%04d',$i);
+    $jml++;
+    
+    echo $tag,$subd,$i,$fat,'>';
+    
+        }
+        print "</div>Count: $jml";
+    }
+
+ //nhent   
 if(isset($_GET['nhentai'])){
-echo"<center>";
-echo'
-<form action="akagi.php" method="get">
-<input type="hidden" name="page" value="nhentai"/>
-<font face="Ubuntu" size="6" color="red">nHentai Stealer</font><p>
-<font face="Ubuntu" size="4" color="white">
-code : <input type="text" style="width:4%;" placeholder="987560" name="c0"><br>
-amount : <input type="text" style="width:2%;" placeholder="225" name="am0"><br>
-img extension : <input type="text" style="width:4%;" placeholder=".jpg / .png" name="ext">
-<br>
-<font face="Ubuntu" size="6" color="gold">	
--------------<br></font>
-<input type="submit" name="nhen" value="LOCK">
-<br>
-</font>
-<br>
-</form>';
-echo "</div>";
+    print $nhentai;
 }
-$nhenf = mkdir("rootresult", 0777);
+
 if(isset($_GET['nhen'])){
-$c0 = $_GET['c0'];
-$ext = $_GET['ext'];
-$am0 = $_GET['am0'];
-echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Ubuntu" size="5" color="white"><b>STEAL<b/></font></a><p></div>';
-echo'<div class="memek"><br>';	
+    echo '[ <font color=gray>',$link,'</font> ] -> as victim',$pencetan; 
+
 for($i=1;$i<=$am0;$i++){	
-echo" <img width='230' height='340' src=";
-echo "https://i.nhentai.net/galleries/";
-echo $c0; echo'/';
-echo $i; echo $ext;
-echo ">";
-	}
+echo $tag,$nhent,$c0,'/',$i,$fat,'>';
+$jml++;
+    }
+    print "</div>Count: $jml";
 }
+
 if(isset($_GET['hitomi'])){
 echo'
-<form action="akagi.php" method="get">
+<form action="index.php" method="get">
 <input type="hidden" name="page" value="hitomi"/>
-<font face="Ubuntu" size="6" color="gold">
+<font face="Consolas" size="6" color="gold">
 -------------<br></font>
-<font face="Ubuntu" size="6" color="red">Hitomi.La Stealer</font><p>
-<font face="Ubuntu" size="4" color="gold">
+<font face="Consolas" size="6" color="red">Hitomi.La Stealer</font><p>
+<font face="Consolas" size="4" color="gold">
 gallery subdomain : <input type="text" style="width:8%;" placeholder="https://ba.hitomi.la" name="subd"><br>
 code : <input type="text" style="width:4%;" placeholder="1142305" name="c0"><br>
 amount : <input type="text" style="width:2%;" placeholder="24" name="am0"><br>
 img extension : <input type="text" style="width:3%;" placeholder=".jpg" name="ext">
 <br>
-<font face="Ubuntu" size="6" color="gold">	
+<font face="Consolas" size="6" color="gold">	
 -------------<br></font>
 <input type="submit" name="hitomila" value="LOCK">
 <br>
@@ -151,8 +78,8 @@ $subd = $_GET['subd'];
 $c0 = $_GET['c0'];
 $ext = $_GET['ext'];
 $am0 = $_GET['am0'];
-echo'<br><font face="Ubuntu" size="3" color="gray">images load no needed if u run this script on another server(localhost)</font><p>';
-echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Ubuntu" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
+echo'<br><font face="Consolas" size="3" color="gray">images load no needed if u run this script on another server(localhost)</font><p>';
+echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Consolas" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
 echo'<div class="memek"><br>';	
 for($i=1;$i<=$am0;$i++){
 echo" <img width='220' height='350' src=";
@@ -166,18 +93,18 @@ echo ">";
 echo "</div>";
 if(isset($_GET['pururin'])){
 echo'
-<form action="akagi.php" method="get">
+<form action="index.php" method="get">
 <input type="hidden" name="page" value="puru"/>
-<font face="Ubuntu" size="6" color="gold">
+<font face="Consolas" size="6" color="gold">
 <br>
 -------------<br></font>
-<font face="Ubuntu" size="6" color="red">Pururin.io Stealer</font><p>
-<font face="Ubuntu" size="4" color="gold">
+<font face="Consolas" size="6" color="red">Pururin.io Stealer</font><p>
+<font face="Consolas" size="4" color="gold">
 code : <input type="text" style="width:4%;" placeholder="38027" name="c0"><br>
 amount : <input type="text" style="width:2%;" placeholder="24" name="am0"><br>
 img extension : <input type="text" style="width:3%;" placeholder=".jpg" name="ext">
 <br>
-<font face="Ubuntu" size="6" color="gold">	
+<font face="Consolas" size="6" color="gold">	
 -------------<br></font>
 <input type="submit" name="puru" value="LOCK">
 <br>
@@ -189,7 +116,7 @@ if(isset($_GET['puru'])){
 $c0 = $_GET['c0'];
 $ext = $_GET['ext'];
 $am0 = $_GET['am0'];
-echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Ubuntu" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
+echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Consolas" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
 echo'<div class="memek"><br>';	
 for($i=1;$i<=$am0;$i++){
 echo" <img width='220' height='350' src=";
@@ -202,19 +129,19 @@ echo ">";
 echo '</div>';
 if(isset($_GET['hentaifox'])){
 echo'
-<form action="akagi.php" method="get">
+<form action="index.php" method="get">
 <input type="hidden" name="page" value="hentaifox"/>
-<font face="Ubuntu" size="6" color="gold">
+<font face="Consolas" size="6" color="gold">
 -------------<br></font>
-<font face="Ubuntu" size="6" color="red">HentaiFox Stealer</font><p>
-<font face="Ubuntu" size="4" color="gold">
+<font face="Consolas" size="6" color="red">HentaiFox Stealer</font><p>
+<font face="Consolas" size="4" color="gold">
    subdomain gallery : <input type="text" style="width:8%;" placeholder="https://i.hentaifox.com/" name="subd"><br>
 folder : <input type="text" style="width:4%;" placeholder="002" name="f0"><br>
 code : <input type="text" style="width:4%;" placeholder="864729" name="c0"><br>
 amount : <input type="text" style="width:2%;" placeholder="38" name="am0"><br>
 img extension : <input type="text" style="width:3%;" placeholder=".jpg" name="ext">
 <br>
-<font face="Ubuntu" size="6" color="gold">	
+<font face="Consolas" size="6" color="gold">	
 -------------<br></font>
 <input type="submit" name="fox" value="LOCK">
 <br>
@@ -228,7 +155,7 @@ $f0 = $_GET['f0'];
 $c0 = $_GET['c0'];
 $ext = $_GET['ext'];
 $am0 = $_GET['am0'];
-echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Ubuntu" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
+echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Consolas" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
 echo'<div class="memek"><br>';	
 for($i=1;$i<=$am0;$i++){
 echo" <img width='220' height='350' src=";
@@ -242,22 +169,22 @@ echo ">";
 echo '</div>';
 if(isset($_GET['hmanga'])){
 echo'
-<form action="akagi.php" method="get">
+<form action="index.php" method="get">
 <input type="hidden" name="page" value="hmanga"/>
-<font face="Ubuntu" size="6" color="gold">
+<font face="Consolas" size="6" color="gold">
 -------------<br></font>
-<font face="Ubuntu" size="6" color="red">HmangaS Stealer</font><p>
-<font face="Ubuntu" size="3" color="gray">
+<font face="Consolas" size="6" color="red">HmangaS Stealer</font><p>
+<font face="Consolas" size="3" color="gray">
 <i>hmangasearcher always use long URLs, check ur input code correctly.</i>
 <p>
-<font face="Ubuntu" size="4" color="gold">
+<font face="Consolas" size="4" color="gold">
 sub gallery : <input type="text" style="width:13%;" placeholder="http://h10.hmangasearcher.com" name="subd"><br>
 folder : <input type="text" style="width:4%;" placeholder="101" name="f0"><br>
 fullmangacode : <input type="text" style="width:18%;" placeholder="ex: Scarlet%20Desire%201/1" name="c0"><br>
 amount : <input type="text" style="width:2%;" placeholder="190" name="am0"><br>
 img ext : <input type="text" style="width:3%;" placeholder=".jpg" name="ext">
 <br>
-<font face="Ubuntu" size="6" color="gold">	
+<font face="Consolas" size="6" color="gold">	
 -------------<br></font>
 <input type="submit" name="hmangas" value="LOCK">
 <br>
@@ -271,7 +198,7 @@ $f0 = $_GET['f0'];
 $c0 = $_GET['c0'];
 $ext = $_GET['ext'];
 $am0 = $_GET['am0'];
-echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Ubuntu" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
+echo'<div id="menu"><a href="steal.php" rel="nofollow" target="_blank"><font face="Consolas" size="5" color="white"><b>STEAL<b/></font></a><p></div>';	
 echo'<div class="memek"><br>';	
 for($i=1;$i<=$am0;$i++){
 echo" <img width='220' height='350' src=";
@@ -289,11 +216,7 @@ $steal =
 			';
 			$file = fopen("steal.php","w+");
 			$write = fwrite ($file ,base64_decode($steal));	
-$beta =
-			'PGgxPk5PVCBZRVQ8L2gxPg==
-			';
-			$file = fopen("beta.php","w+");
-			$write = fwrite ($file ,base64_decode($beta));				
+		
 $dnesia =
 			'PHRpdGxlPkltYWdlU3RlYWxlcjwvdGl0bGU+DQo8bGluayByZWw9InNob3J0Y3V0IGljb24iIGhyZWY9Imh0dHBzOi8vMS5icC5ibG9nc3BvdC5jb20vLXE0V2hvRXdmUmxJL1hEQ251b2ZfVHNJL0FBQUFBQUFBSXNRL0h4QTZoZDJtSU9naU84S3ZlWGF4S3dmYWVjYXdXcENnd0NMY0JHQXMvczE2MDAva2Fuby5wbmciIHR5cGU9ImltYWdlL3gtaWNvbiI+DQo8bWV0YSBuYW1lPSdhdXRob3InIGNvbnRlbnQ9J1N0dXBpZGMwZGUgRmFtaWx5Jz4NCjxsaW5rIGhyZWY9Imh0dHA6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3M/ZmFtaWx5PVVidW50dSIgcmVsPSJzdHlsZXNoZWV0IiB0eXBlPSJ0ZXh0L2NzcyI+DQoNCjxzdHlsZT4NCg0KLnN1YmJ0biB7YmFja2dyb3VuZDojYjcwNTA1O2NvbG9yOndoaXRlO2JvcmRlcjogMXB4IHNvbGlkICMwMDA7IHBhZGRpbmc6NnB4IDZweCA2cHggNnB4O30NCg0KDQouYm9yZGVyZ2F5YXsNCgkJCWJhY2tncm91bmQ6YmxhY2s7DQoJCQljb2xvcjp3aGl0ZTsNCgkJCW1hcmdpbjowIDEwcHg7DQoJCQlmb250LWZhbWlseTpVYnVudHUgTW9ubzsNCgkJCWZvbnQtc2l6ZToxNnB4Ow0KCQkJYm9yZGVyOjJweCBzb2xpZCAjMmQyYjJiOw0KCQ0KCQl9DQoJCS5ib3JkZXJnYXlhOmhvdmVyew0KCQkJYmFja2dyb3VuZDojMmQyYjJiOw0KCQkJY29sb3I6d2hpdGU7DQoJCQltYXJnaW46MCAxMHB4Ow0KCQkJZm9udC1mYW1pbHk6VWJ1bnR1IE1vbm87DQoJCQlmb250LXNpemU6MTZweDsNCgkJCWJvcmRlcjoycHggc29saWQgY3JpbXNvbjsNCgkJfQ0KCQ0KCS5pbWFnZSB7DQogICAgd2lkdGg6IDM5MHB4Ow0KICAgIGhlaWdodDogMzQwcHg7DQogICAgLXdlYmtpdC1hbmltYXRpb246c3BpbiA4cyBsaW5lYXIgaW5maW5pdGU7DQogICAgLW1vei1hbmltYXRpb246c3BpbiA4cyBsaW5lYXIgaW5maW5pdGU7DQogICAgYW5pbWF0aW9uOnNwaW4gN3MgbGluZWFyIGluZmluaXRlOw0KfQ0KQC1tb3ota2V5ZnJhbWVzIHNwaW4geyAxMDAlIHsgLW1vei10cmFuc2Zvcm06IHJvdGF0ZSgtMzYwZGVnKTsgfSB9DQpALXdlYmtpdC1rZXlmcmFtZXMgc3BpbiB7IDEwMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0zNjBkZWcpOyB9IH0NCkBrZXlmcmFtZXMgc3BpbiB7IDEwMCUgeyAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKC0zNjBkZWcpOyB0cmFuc2Zvcm06cm90YXRlKC0zNjBkZWcpOyB9IH0NCg0KDQoNCjwvc3R5bGU+DQoNCjw/cGhwDQoJaW5jbHVkZSgnc2x1dC5waHAnKTsgLy9QYXJzZXIgdG8gZ2V0IGVsZW1lbnQgaW4geW91ciBsaW5rDQoJaWYoaXNzZXQoJF9QT1NUWydzdWJtaXQnXSkpewkNCgkJJHVybD1maWxlX2dldF9odG1sKCRfUE9TVFsndXJsJ10pOyANCgkkaW1hZ2UgPSAkdXJsLT5maW5kKCJpbWciKTsgDQoJZm9yZWFjaCgkaW1hZ2UgYXMgJGltZykgDQoJew0KCQkkcz0kaW1nLT5zcmM7IA0KCQkkaW1nX25hbWUgPSAncm9vdHJlc3VsdC8nLmJhc2VuYW1lKCRzKTsgLy9jaGFuZ2UgaXQNCgkJZmlsZV9wdXRfY29udGVudHMoJGltZ19uYW1lLCBmaWxlX2dldF9jb250ZW50cygkcykpOyANCgl9DQoJfQ0KCQ0KCQ0KPz4NCiAgPGJyPjxjZW50ZXI+PGZvbnQgZmFjZT0iVWJ1bnR1IiBzaXplPSI1IiBjb2xvcj0id2hpdGUiPjxiPkltYWdlU3RlYWxlciBieSBTYzA8Yi8+PC9mb250PjwvY2VudGVyPg0KICA8Y2VudGVyPjxpbWcgY2xhc3M9J2ltYWdlJyBzcmM9J2h0dHBzOi8vMy5icC5ibG9nc3BvdC5jb20vLTZYWk9rNnVQVjRVL1hFQk84eHdGY3dJL0FBQUFBQUFBQkw0L0JEQUhBeElvT0NBWkNPMEZtRW5OdEF5R1hvVHg5ZHo2d0NMY0JHQXMvczE2MDAvd2VlYmxvZ28ucG5nJz4NCiAgPGJyPjxicj48YnI+DQogIDxjZW50ZXI+PGZvbnQgZmFjZT0iVWJ1bnR1IiBzaXplPSIzIiBjb2xvcj0id2hpdGUiPjxiPmJsYW5rPyBvciBzdG9wcGVkIHJlc3BvbmQsIGRvbid0IHdvcnJ5IHN0aWxsIGRvIHdlYnJlcXVlc3QuPGIvPjwvZm9udD4NCiAgPHA+DQo8Y2VudGVyPg0KPGJvZHkgYmdjb2xvcj1ibGFjaz4NCjxmb3JtIGlkPSJmb3JtMSIgbmFtZT0iZm9ybTEiIG1ldGhvZD0icG9zdCIgYWN0aW9uPSIiPg0KICA8dGFibGUgd2lkdGg9IjUwMCIgIGFsaWduPSJjZW50ZXIiIGNlbGxwYWRkaW5nPSIxIiBjZWxsc3BhY2luZz0iMSI+DQogICAgPHRyPg0KICAgICAgPHRkIGNvbHNwYW49IjIiPjxsYWJlbCBmb3I9InRleHRmaWVsZCI+PC9sYWJlbD4NCiAgICAgIDxpbnB1dCBjbGFzcz0iYm9yZGVyZ2F5YSIgc3R5bGU9IndpZHRoOjEwMCU7IiBwbGFjZWhvbGRlcj0iUFVUIFlPVVIgRlVMTCBVUkwgSEVSRS4uLi4iIHR5cGU9InRleHQiIG5hbWU9InVybCIgaWQ9InRleHRmaWVsZCIgLz4NCiAgICAgIDwvdGQ+DQogICAgICANCiAgICA8L3RyPg0KICAgIDx0cj4NCiAgICAgIDx0ZCBjb2xzcGFuPSIyIiBhbGlnbj0iY2VudGVyIiB2YWxpZ249Im1pZGRsZSI+PGlucHV0IGNsYXNzPSJzdWJidG4iIHR5cGU9InN1Ym1pdCIgbmFtZT0ic3VibWl0IiBpZD0iYnV0dG9uIiB2YWx1ZT0iICA+ICAiIC8+PC90ZD4NCiAgICA8L3RyPg0KICA8L3RhYmxlPg0KPC9mb3JtPg==
 			';
@@ -304,56 +227,33 @@ $slut =
 			';
 			$file = fopen("slut.php","w+");
 			$write = fwrite ($file ,base64_decode($slut));	
-?>
-<font face='courier' color='gold'>
-<p>
 
-<font size='5'>*</font>
-<a href="?nhentai" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>Nhentai Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[nhentai.net]</b></font>
-<br>
-<font size='5'>*</font>
-<a href="?hitomi" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>Hitomi.la Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[hitomi.la]</b></font>
-<br>
-<font size='5'>*</font>
-<a href="beta.php" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>Simply-Hentai Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[simply-hentai.com]</b></font>
-<font size='3' color='gold'><b>BETA</b></font>
-<br>
-<font size='5'>*</font>
-<a href="beta.php" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>HENTAI2READ Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[hentai2read.com]</b></font>
-<font size='3' color='gold'><b>BETA</b></font>
-<br>
-<font size='5'>*</font>
-<a href="?pururin" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>Pururin Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[pururin.io]</b></font>
-<br>
-<font size='5'>*</font>
-<a href="?hentaifox" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>HentaiFox Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[hentaifox.com]</b></font>
-<br>
-<font size='5'>*</font>
-<a href="?hmanga" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>HManga Searcher Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[hmangasearcher.com]</b></font>
-<br>
-<font size='5'>*</font>
-<a href="beta.php" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>e-Hentai Stealer</b></font></span></a>
-<font size='2' color='gray'><b>[e-hentai.org]</b></font>
-<font size='3' color='gold'><b>BETA</b></font>
-<br>
-<font size='5'>*</font>
-<a href="dnesia.php" rel="nofollow" target="_blank">
-<font face='Ubuntu' size='3' color='green'><b>Doujinesia Grabber</b></font></span></a>
-<font size='2' color='gray'><b>[Grab your Doujinshi/LightNovel/Manga/Manhwa or everything img tags]</b></font>
-<p>	
-<hr color=gold width=40%>
+
+			// cmd 
+
+
+if(isset($_GET['term'])){
+	echo"
+<font face='consolas' size='2' color='gold'><center>diskinfo:<br>
+[SPACE: <font color=green>$total</font>] - [Free: <font color=lime>$freespace</font>]</center></font>";
+	?><p><form  method="POST" action="">
+	
+	
+	<input type="text"  style="background:white;color:black;" size="60" placeholder="zip -r oneenee.zip rootresult;ls -lh" name="cmd">
+	<input type="submit" value=">">
+</form>
+
+
+<?php if(isset($_POST['cmd'])){
+$data = $_POST['cmd'];
+$result = shell_exec($data);
+}else{
+$result = shell_exec("help");
+}
+?>
+<textarea readonly="" style="background:black;color:gold;margin: 2px; width: 520px; height: 293px;">
+<?php echo $result;
+}
+
+?>
+</textarea>

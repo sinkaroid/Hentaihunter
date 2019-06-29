@@ -1,4 +1,4 @@
 <?php
 error_reporting(0);
-require 'process/front.php';
-require 'process/str.php';
+require 'inc/front.php';
+require 'inc/str.php';
